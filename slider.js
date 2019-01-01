@@ -7,8 +7,8 @@ var slider = document.querySelector('.slider');
 slider.addEventListener('click', function (event) {
     if (!event.target.classList.contains('slider__icon')) return;
 
-    var id = event.target.getAttribute('data-id');
-    showSliderId(id);
+    CURRENT_SLIDE = parseInt(event.target.getAttribute('data-id'));
+    showSliderId(CURRENT_SLIDE);
 });
 
 initSlider();
